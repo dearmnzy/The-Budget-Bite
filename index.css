@@ -1,0 +1,487 @@
+@font-face {
+    font-family: Poppins-Bold;
+    src: url('/fonts/poppins.bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Poppins-Light;
+    src: url('/fonts/poppins.light.ttf') format('truetype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+  font-family: 'Poppins-Light', sans-serif;
+  min-height: 100vh;
+}
+
+.hero {
+    background-image: url('background/background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.hero-content .hero-title {
+    font-family: 'Poppins-Bold', sans-serif;
+    color: #fff;
+    text-align: center;
+    font-size: 5rem;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);   
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-content .hero-subtitle {
+    font-family: 'Poppins-Light', sans-serif;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);   
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-content .hero-description {
+    font-family: 'Poppins-Light', sans-serif;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);   
+    animation: fadeIn 2s ease-in-out;
+    text-shadow: 5px 5px 10px #00000082;
+}
+
+.hero .explorebttn .explore {
+    font-family: 'Poppins-Bold', sans-serif;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    background-color: #820808;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 50px;
+    animation: fadeIn 2s ease-in-out;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero .explorebttn .explore:hover {
+    color: #820808;
+    background-color: #fdfcea;
+    transform: translateX(-50%) translateY(-4px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 900px) {
+    .hero-content .hero-title {
+        font-size: 4rem;
+    }
+    .hero-content .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    .hero-content .hero-description {
+        font-size: 1.2rem;
+        position: absolute;
+        top: 63%;
+    }
+    .hero .explorebttn .explore {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+        position: absolute;
+        top: 75%;
+    }
+}
+
+.recommendations {
+    background-color: #fdfcea;
+    padding: 50px 20px;
+}
+
+.recommendations .top-recommended {
+    font-family: 'Poppins-Bold', sans-serif;
+    color: #820808;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    padding-top: 25px;
+}
+
+.recommendations hr {
+    max-width: 65%;
+    height: 2px;
+    background-color: #820808;
+    border: none;
+    margin: 0 auto 30px auto;
+}
+
+.featured-cafes #featured-cafes-title {
+    text-align: center;
+    font-family: 'Poppins-Bold', sans-serif;
+    color: #820808;
+    font-size: 3rem;
+    margin: 0 auto 10px;
+}
+
+.featured-cafes #featured-cafes-description {
+    color: #820808;
+    text-align: center;
+    display: block;
+    width: min(700px, 90%);
+    margin: 0 auto 30px;
+    font-size: 1.2rem;
+}
+.recommendations .card1 {
+    background-color: #820808;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 40px;
+    padding: 40px 30px;
+    border-radius: 50px;
+    transform: none;
+    position: static;
+}
+
+.card1 .card-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.card1 .card-image1,
+.card1 .card-image2,
+.card1 .card-image3 {
+    max-height: 180px;
+    width: 100%;
+    max-width: 180px;
+    object-fit: cover;
+    border-radius: 30px;
+    transform: none;
+    position: static;
+}
+
+.card1 .card1-title1,
+.card1 .card1-title2,
+.card1 .card1-title3 {
+    font-family: 'Poppins-Bold', sans-serif;
+    color: #fdfcea;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0;
+    position: static;
+    transform: none;
+}
+
+.card1 .text-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card1 .card1-address1,
+.card1 .card1-address2,
+.card1 .card1-address3 {
+    font-family: 'Poppins-Light', sans-serif;
+    color: #fdfcea;
+    font-size: 0.9rem;
+    margin: 0;
+    text-align: center;
+    position: static;
+    transform: none;
+    left: auto;
+    right: auto;
+    top: auto;
+}
+
+.featured-resto #featured-resto-title {
+    text-align: center;
+    font-family: 'Poppins-Bold', sans-serif;
+    color: #820808;
+    font-size: 3rem;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.featured-resto #featured-resto-description {
+    color: #820808;
+    text-align: center;
+    display: block;
+    width: min(700px, 90%);
+    margin: 0 auto 30px;
+    font-size: 1.2rem;
+}
+
+.recommendations .card2 {
+    background-color: #820808;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 40px;
+    padding: 40px 30px;
+    border-radius: 50px;
+    transform: none;
+    position: static;
+}
+
+.card2 .card-item-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.card2 .card-image4,
+.card2 .card-image5,
+.card2 .card-image6 {
+    max-height: 180px;
+    width: 100%;
+    max-width: 180px;
+    object-fit: cover;
+    border-radius: 30px;
+    transform: none;
+    position: static;
+}
+
+.card2 .card2-title-1,
+.card2 .card2-title-2,
+.card2 .card2-title-3 {
+    font-family: 'Poppins-Bold', sans-serif;
+    color: #fdfcea;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0;
+    position: static;
+    transform: none;
+}
+
+.card2 .text-stack-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card2 .card2-address-1,
+.card2 .card2-address-2,
+.card2 .card2-address-3 {
+    font-family: 'Poppins-Light', sans-serif;
+    color: #fdfcea;
+    font-size: 0.9rem;
+    margin: 0;
+    text-align: center;
+    position: static;
+    transform: none;
+    left: auto;
+    right: auto;
+    top: auto;
+}
+
+.budget-friendly #budget-friendly-title {
+    text-align: center;
+    font-family: 'Poppins-Bold', sans-serif;
+    color: #820808;
+    font-size: 3rem;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.budget-friendly #budget-friendly-description {
+    color: #820808;
+    text-align: center;
+    display: block;
+    width: min(700px, 90%);
+    margin: 0 auto 30px;
+    font-size: 1.2rem;
+}
+
+.recommendations .card3 {
+    background-color: #820808;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 40px;
+    padding: 40px 30px;
+    border-radius: 50px;
+    transform: none;
+    position: static;
+}
+
+.card3 .card-item-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.card3 .card-image7,
+.card3 .card-image8,
+.card3 .card-image9 {
+    max-height: 180px;
+    width: 100%;
+    max-width: 180px;
+    object-fit: cover;
+    border-radius: 30px;
+    transform: none;
+    position: static;
+}
+
+.card3 .card3-title-1 {
+    font-size: 1rem;
+    font-family: 'Poppins-Bold', sans-serif;
+    color: #fdfcea;
+    text-align: center;
+    margin: 0;
+    position: static;
+    transform: none;
+
+}
+
+.card3 .card3-title-2,
+.card3 .card3-title-3 {
+    font-family: 'Poppins-Bold', sans-serif;
+    color: #fdfcea;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0;
+    position: static;
+    transform: none;
+}
+
+.card3 .text-stack-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card3 .card3-address-1,
+.card3 .card3-address-2,
+.card3 .card3-address-3 {
+    font-family: 'Poppins-Light', sans-serif;
+    color: #fdfcea;
+    font-size: 0.9rem;
+    margin: 0;
+    text-align: center;
+    position: static;
+    transform: none;
+    left: auto;
+    right: auto;
+    top: auto;
+}
+
+
+@media (max-width: 900px) {
+    .featured-cafes,
+    .featured-resto,
+    .budget-friendly {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .featured-cafes #featured-cafes-title,
+    .featured-resto #featured-resto-title,
+    .budget-friendly #budget-friendly-title {
+        text-align: center;
+        position: static;
+        left: auto;
+        top: auto;
+        margin: 0 auto 10px;
+    }
+
+    .featured-cafes #featured-cafes-description,
+    .featured-resto #featured-resto-description,
+    .budget-friendly #budget-friendly-description {
+        text-align: center;
+        padding: 10px;
+        margin: 0 auto 20px;
+        position: static;
+        left: auto;
+        top: auto;
+        display: block;
+        width: min(700px, 90%);
+        font-size: 1rem;
+    }
+
+    .recommendations .card1,
+    .recommendations .card2,
+    .recommendations .card3 {
+        grid-template-columns: 1fr;
+        width: min(90%, 480px);
+        max-width: 100%;
+        margin: 0 auto 40px;
+        padding: 24px 16px;
+        justify-items: center;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .card1 .card-item,
+    .card2 .card-item-2,
+    .card3 .card-item-3 {
+        width: 100%;
+        max-width: 240px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card1 .card1-title1,
+    .card1 .card1-title2,
+    .card1 .card1-title3 {
+        font-size: 1rem;
+    }
+
+    .card2 .card2-title-1,
+    .card2 .card2-title-2,
+    .card2 .card2-title-3 {
+        font-size: 1rem;
+    }
+
+    .card3 .card3-title-1 {
+        font-size: 0.7rem;
+    }
+
+    .card3 .card3-title-2,
+    .card3 .card3-title-3 {
+        font-size: 1rem;
+    }
+}
