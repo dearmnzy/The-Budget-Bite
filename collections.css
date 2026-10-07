@@ -111,6 +111,9 @@ img {
     padding: 4px;
     color: white;
     margin-top: auto;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
 }
 
 #top-button {
